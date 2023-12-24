@@ -23,7 +23,7 @@ class _EmailVerficationState extends State<EmailVerfication> {
   @override
   void initState() {
     if (!isverified) {
-      timer = Timer.periodic(Duration(seconds: 10), (timer) async {
+      timer = Timer.periodic(Duration(seconds: 5), (timer) async {
         await FirebaseAuth.instance.currentUser!.reload();
 
         setState(() {
