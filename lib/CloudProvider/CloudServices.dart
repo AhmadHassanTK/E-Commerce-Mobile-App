@@ -85,7 +85,7 @@ class CloudServices with ChangeNotifier {
     return data.length;
   }
 
-  Stream<Iterable<Item>> allNotes({required String owneruserid}) =>
+  Stream<Iterable<Item>> alldata({required String owneruserid}) =>
       itemsdatabase.snapshots().map((event) => event.docs
           .map((doc) => Item.fromSnapshot(doc))
           .where((item) => item.userid == owneruserid));
