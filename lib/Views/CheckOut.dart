@@ -87,7 +87,7 @@ class CheckOut extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: StreamBuilder(
-            stream: cloudservices.allNotes(
+            stream: cloudservices.alldata(
                 owneruserid: FirebaseAuth.instance.currentUser!.uid),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
